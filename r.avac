@@ -12,7 +12,7 @@
 #				Public License (>=v2). Read the file COPYING that comes
 #				with GRASS for details.
 
-# VERSION:		3.1.5 20210721
+# VERSION:		3.1.5 20210828
 #				Currently supports levels 1 & 2 AMR calculations
 #				implements d0 modulation rule (based on SBG method)
 #				implements snow hypsometric gradient depth definition
@@ -657,8 +657,8 @@ fi
 #---------------------------------------------
 if [ "$GIS_FLAG_a" -eq 1 ] ; then
 	# purge time series, just keep max(h) and max(p) raster maps
-	t.remove -rf inputs="$GIS_OPT_simul"_h
-	t.remove -rf inputs="$GIS_OPT_simul"_p
+	t.remove -rdf inputs="$GIS_OPT_simul"_h
+	t.remove -rdf inputs="$GIS_OPT_simul"_p
 fi
 
 #---------------------------------------------
